@@ -1,0 +1,7 @@
+# conda 只負責 Python 版本；套件統一寫在 pyproject.toml，Phase 3 部署 Azure Functions 時也從那裡產生 requirements.txt。
+# 建立：conda env create -f environment.yml
+# 安裝套件：conda activate breakup && pip install -e ".[dev]"
+name: breakup
+dependencies:
+  - python=3.12
+  - pip

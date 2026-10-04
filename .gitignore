@@ -1,0 +1,22 @@
+# 只上傳程式碼：先忽略根目錄的所有檔案，再逐一放行。
+# 構想書、CLAUDE.md、review 筆記等策略文件因此預設不會進版控。
+# 新增頂層目錄（如 Phase 3 的 Functions、Phase 6 的 .github/）時，要在下方加一行 !/目錄名/
+/*
+!/.gitignore
+!/environment.yml
+!/pyproject.toml
+!/src/
+!/tests/
+
+# 即使在放行的目錄內，也一律排除
+.env
+.env.*
+!.env.example
+local.settings.json
+*.pem
+*.key
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
